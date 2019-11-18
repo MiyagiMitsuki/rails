@@ -53,4 +53,10 @@ end
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
-gem 'pry-byebug', group: :development
+group :development do
+  gem 'pry-byebug', group: :development
+end
+
+group :production do
+  gem 'pg', '0.20.0'
+end
